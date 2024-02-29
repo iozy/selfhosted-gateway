@@ -7,7 +7,7 @@ echo $GATEWAY_CLIENT_WG_PRIVKEY > /etc/wireguard/link0.key
 ip link add link0 type wireguard
 
 wg set link0 private-key /etc/wireguard/link0.key
-wg set link0 listen-port 18521
+wg set link0 listen-port 19521
 ip addr add 10.0.0.2/24 dev link0
 ip link set link0 up
 ip link set link0 mtu $LINK_MTU
